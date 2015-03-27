@@ -1,13 +1,23 @@
 package com.practice.sortingalgo;
 
-public class InsertionSort implements Sort{
-	
+public class InsertionSort implements Sort {
+
 	private static String BLANK_SPACE = " ";
 
 	@Override
 	public int[] sortArray(int[] array) {
-		
-		return null;
+		int temp, j = 0;
+		for (int i = 0; i < array.length -1; i++) {
+			temp = array[i];
+			j = i - 1;
+
+			while (j >= 0 && array[j] > temp) {
+				array[j + 1] = array[j];
+				j--;
+			}
+			array[j + 1] = temp;
+		}
+		return array;
 	}
 
 	public static void main(String args[]) {
@@ -40,6 +50,5 @@ public class InsertionSort implements Sort{
 		}
 
 	}
-	
-	
+
 }
