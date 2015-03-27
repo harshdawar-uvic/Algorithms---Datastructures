@@ -13,12 +13,12 @@ package com.practice.sortingalgo;
  * @author hArsh
  *
  */
-public class BubbleSort {
+public class BubbleSort implements Sort{
 
 	private static String BLANK_SPACE = " ";
 
-	
-	private int[] sortArray(int[] array) {
+	@Override
+	public int[] sortArray(int[] array) {
 
 		int temp = 0;
 		for (int i = 0; i < array.length - 2; i++) {

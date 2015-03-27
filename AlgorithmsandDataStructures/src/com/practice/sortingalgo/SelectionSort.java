@@ -11,10 +11,11 @@ package com.practice.sortingalgo;
  * @author hArsh
  *
  */
-public class SelectionSort {
+public class SelectionSort implements Sort {
 	private static String BLANK_SPACE = " ";
 
-	private int[] sortArray(int[] array) {
+	@Override
+	public int[] sortArray(int[] array) {
 		int smallest = 0;
 		int temp = 0;
 
